@@ -1,16 +1,22 @@
-def get_matrix(n, m, value):
+def get_matrix (n, m, value):
     matrix = []
+    if n <= 0:
+        return matrix
+    elif m <= 0:
+        return matrix
+    elif value <= 0:
+        return matrix
     for i in range(n):
-        a = []
-        matrix.append(a)
+        matrix.append([])
         for j in range(m):
-            a.append(value)
-    return matrix
+            matrix[i].append(value)
+    else:
+        return matrix
 
 
-result_1 = get_matrix(2, 2, 10)
-result_2 = get_matrix(3, 5, 42)
-result_3 = get_matrix(4, 2, 13)
-print(result_1)
-print(result_2)
-print(result_3)
+result1 = get_matrix(2, 2, 10)
+result2 = get_matrix(3, 5, 42)
+result3 = get_matrix(4, 2, 13)
+print(result1)
+print(result2)
+print(result3)
